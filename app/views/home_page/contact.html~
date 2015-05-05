@@ -73,13 +73,6 @@
             <div class="row"> <!-- outer row -->
                 <div class="col-md-10 col-md-offset-1"> <!-- col 10 with offset 1 to centered -->
                     <div class="row"> <!-- nested row -->
-
-                        <!-- contact detail using col 4 -->
-                        <div class="col-md-4">  
-                            <div class="contact-detail">
-                                <h4></h4> <!-- address -->
-                            </div>
-                        </div>
                         <!-- contact detail using col 4 -->
                         <div class="col-md-4">
                             <div class="contact-detail">

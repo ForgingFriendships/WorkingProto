@@ -76,3 +76,26 @@
 
     = yield
 
+    /
+      Footer
+      \==================================================
+    #tf-footer
+      .container
+        / container
+        %p.pull-left © 2015 Forging Friendships. All rights reserved.
+        / copyright text here
+        %ul.list-inline.social.pull-right
+          %li
+            %a{:href => "auth/facebook"}
+              %i.fa.fa-facebook
+          / Change # With your FB Link
+          %li
+            %a{:href => "auth/twitter"}
+              %i.fa.fa-twitter
+          / Change # With your Twitter Link
+          %li
+            %a{:href => "auth/google_oauth2"}
+              %i.fa.fa-google-plus
+          / Change # With your Google Plus Link
+      / end container
+
