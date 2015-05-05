@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  include SessionsHelper
   # Creation of new Users is handled by Sessions controller.  When a new session
   # is created with a User unheard of before (first time you sign in), the
   # sessions controller makes a new User instance
@@ -12,7 +13,7 @@ class UsersController < ApplicationController
   # So we needn't check if you are an adminstrator... skip that check..
   skip_before_filter :block_page_if_not_admin
   # Leave in place before_filters that check if you are signed in
-
+  #skip_before_filter :block_page_if_not_signed_in, :only => [:new, :create]
 
 
   def my_events
