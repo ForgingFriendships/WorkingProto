@@ -55,37 +55,43 @@
       Contact Section
       \==================================================
     #tf-contact.contact
-      .container
-        / container
+      .container-fluid
         .section-header
         %h2 Sign up!
-        = form_tag sign_up_path, :method => :post do
-          = label :user, :name, 'Name:'
-          = text_field :user, :name
-          <br>
+        .row-fluid
+          .col-xs-6.col-centered.pull-left
+            %t Already a user? 
+            = link_to "Sign in now!", sign_in_path
+            <br><br>
+            = form_tag sign_up_path, :method => :post do
+              = label :user, :name, 'Name'
+              = text_field :user, :name, :class => "form-control", :placeholder => "Enter a User name"
+              <br>
 
-          = label :user, :email, 'Email:'
-          = text_field :user, :email
-          <br>
+              = label :user, :email, 'Email'
+              = text_field :user, :email, :class => "form-control", :placeholder => "Enter a Email"
+              <br>
 
-          = label :user, :password, 'Password:'
-          = password_field :user, :password
-          <br>
+              = label :user, :password, 'Password'
+              = password_field :user, :password, :class => "form-control", :placeholder => "Enter a Password"
+              <br>
 
-          = label :user, :password_confirmation, 'Password_confirmation:'
-          = password_field :user, :password_confirmation
-          <br>
+              = label :user, :password_confirmation, 'Password Confirmation'
+              = password_field :user, :password_confirmation, :class => "form-control", :placeholder => "Confirm Password"
+              <br>
 
-          = submit_tag 'Sign Up'
-          <br><br>
-          %p
-          Already a user? 
-          = link_to "Log in!", login_user_path
-          <br><br>
-          Or, Sign up through:
-          <br>
-          = link_to "Facebook", "/auth/facebook"
-          <br>
-          = link_to "Twitter", "/auth/twitter"
-          <br>
-          = link_to "Google", "/auth/google_oauth2"
+              = submit_tag 'Sign up', :class => "btn btn-primary tf-btn color"
+              <br><br>
+          .col-xs-3.col-centered.pull-left
+            %br
+              %br
+            %a.btn.btn-primary.tf-btn.color{:button => "", :href => "/auth/facebook", :type => "facebook_sign"}
+              Sign up with Facebook
+            %br
+              %br
+                %a.btn.btn-primary.tf-btn.color{:button => "", :href => "/auth/twitter", :type => "twitter_sign"}
+                  Sign up with Twitter
+                %br
+                  %br
+                    %a.btn.btn-primary.tf-btn.color{:button => "", :href => "/auth/google_oauth2", :type => "google_sign"}
+                      Sign up with Google
