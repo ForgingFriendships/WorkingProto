@@ -91,7 +91,42 @@ a:focus {
 .navbar-default .navbar-toggle:focus>.navbar-default .navbar-toggle .icon-bar { color: #4DA848 }
 
 
+#left_column{
+  position:relative;
+  left:0;
+  top:0;
+  margin-bottom:150px;
+}
+
+#friendship-title{
+  position: absolute;
+  right:0;
+  top:0;
+  padding-top:80px;
+  padding-left:80px;
+}
+
+#sign-up{
+  width:60%;
+  padding:0;
+  font-size:8px;
+  height:15px;
+}
+
 @media(min-width:768px){
+
+#friendship-title{
+  padding-top:150px;
+  padding-left:80px;
+}
+
+#sign-up{
+  width: 22%;
+  height: 68px;
+  font-size: 24px;
+  padding-top:10px;
+}
+
 ul.nav li.dropdown:hover ul.dropdown-menu{ display: block; text-align:right; min-width:0px;}
 .nav .dropdown-toggle .caret { display:none; }
 
@@ -162,7 +197,7 @@ nav.shrink .navbar-brand img{
 #tf-header .breadcrumb > li a { color: #ffffff }
 /* Home Style */
 #tf-home {
-    background: url(../img/zac&abby.jpg);
+    background: url(../img/zacabby.jpg);
     background-size: 100% auto;
     background-position: 0 90px;
     background-attachment: local;
