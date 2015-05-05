@@ -19,7 +19,7 @@ Forging::Application.routes.draw do
   match '/management_team', :to => 'home_page#management_team'
   #match '/sign_up', :to => 'home_page#sign_up'
   get '/sign_up', :to => 'users#new'
-  post '/sign_up', :to => 'users#create', :as => 'sign_up'
+  post '/sign_up', :to => 'first_party_users#create', :as => 'sign_up'
   #match '/sign_in', :to => 'home_page#sign_in'
   get '/sign_in', :to => 'sessions#new'#, :as => 'login_user'
   post '/sign_in', :to => 'sessions#create', :as => 'login_user'

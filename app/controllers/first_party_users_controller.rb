@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class FirstPartyUsersController < ApplicationController
   include SessionsHelper
   # Creation of new Users is handled by Sessions controller.  When a new session
   # is created with a User unheard of before (first time you sign in), the
@@ -16,28 +16,29 @@ class UsersController < ApplicationController
   skip_before_filter :block_page_if_not_signed_in, :only => [:new, :create]
 
   def new
-    @user = User.new
+    @user = FirstPartyUser.new
   end
 
   def create
     #rails params.to_yaml
-    @user =  User.new(params[:user])
+    @user =  FirstPartyUser.new(params[:user])
 
     if @user.save
-      log_in @user, false #false refers to fact that we are not logging in a first party user
+      log_in @user, true # true because this is a first party login
       flash[:notice] = "Welcome to Forging Friendships, #{@user.name}!"
       go_home
     else
       flash[:notice] = "Could not sign up!"
-      render "new"
+      redirect_to sign_up_path and return
     end
   end
 
-
+=begin
   def my_events
     # the events this user is registered to attend; sorted by date...
     @events = @current_user.events.find(:all, :order => :start_date_time)
   end
+
 
   def register_for_event
     @event_for_registration = Event.where(:id => params[:event_for_registration]).first
@@ -66,6 +67,7 @@ class UsersController < ApplicationController
       flash[:notice] = "You are now registered to attend this event! See list below."
       redirect_to '/my_events' and return
   end
+=end
 
 
 

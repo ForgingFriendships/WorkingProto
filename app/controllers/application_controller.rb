@@ -8,7 +8,18 @@ class ApplicationController < ActionController::Base
     # We exploit the fact that find_by_id(nil) returns nil
     # Also because "||=" used, if @current_user already has value in it,
     # won't be written over
-    @current_user ||= User.find_by_id(session[:user_id])
+    #raise session[:user].to_yaml
+
+    if session[:user]
+      if session[:user][:is_first_party]
+        #raise session[:user][:is_first_party].to_yaml
+        @current_user ||= FirstPartyUser.find_by_id(session[:user][:user_id])
+      else
+        #raise session[:user].to_yaml
+        @current_user ||= User.find_by_id(session[:user][:user_id])
+        #raise (User.find_by_id(session[:user_id]) == nil).to_yaml
+      end
+    end
   end
 
 

@@ -1,4 +1,4 @@
-class User < ActiveRecord::Base
+class FirstPartyUser < ActiveRecord::Base
   # Almudena says attr_accessible should be OK here she thinks
   attr_accessible :name, :provider, :uid, :email, :password, :password_confirmation
   attr_protected :admin
@@ -8,9 +8,9 @@ class User < ActiveRecord::Base
   validates :name,      :presence     => true, 
                         :length       => {  :maximum  => 50 }
   validates :email,     :presence     => true,
-                        :format       => {  :with     => email_regex }, :unless => :has_provider?,
+                        :format       => {  :with     => email_regex },
                         :uniqueness   => {  :case_sensitive => false }
-  #has_secure_password #:has_provider?#adds automatically: password presence, length, confirmation
+  has_secure_password #:has_provider?#adds automatically: password presence, length, confirmation
   #validates :password_digest, :presence => true
    #                           :unless   => :has_provider?
 #=end
@@ -23,9 +23,6 @@ class User < ActiveRecord::Base
 
   #has_secure_password
 
-  def has_provider?
-    provider && provider
-  end
 
   has_and_belongs_to_many :events
 

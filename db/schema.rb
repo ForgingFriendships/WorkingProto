@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150505011625) do
+ActiveRecord::Schema.define(:version => 20150505052843) do
 
   create_table "events", :force => true do |t|
     t.string   "event_name"
@@ -28,6 +28,14 @@ ActiveRecord::Schema.define(:version => 20150505011625) do
     t.string   "event_picture_file_path"
   end
 
+  create_table "events_first_party_users", :id => false, :force => true do |t|
+    t.integer "event_id"
+    t.integer "first_party_user_id"
+  end
+
+  add_index "events_first_party_users", ["event_id"], :name => "index_events_first_party_users_on_event_id"
+  add_index "events_first_party_users", ["first_party_user_id"], :name => "index_events_first_party_users_on_first_party_user_id"
+
   create_table "events_users", :id => false, :force => true do |t|
     t.integer "event_id"
     t.integer "user_id"
@@ -35,6 +43,17 @@ ActiveRecord::Schema.define(:version => 20150505011625) do
 
   add_index "events_users", ["event_id"], :name => "index_events_users_on_event_id"
   add_index "events_users", ["user_id"], :name => "index_events_users_on_user_id"
+
+  create_table "first_party_users", :force => true do |t|
+    t.string   "name"
+    t.string   "provider"
+    t.string   "uid"
+    t.boolean  "admin",           :default => false
+    t.string   "email"
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
+    t.string   "password_digest"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"
