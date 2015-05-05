@@ -120,7 +120,6 @@ a:focus {
 }
 
 #sign-up{
-  width: 22%;
   height: 22%; 
   font-size: 24px;
   padding:1%;
@@ -213,7 +212,7 @@ nav.shrink .navbar-brand img{
 }
 #tf-home p { color: white }
 #tf-home .vw-font h1 { font-size: 3.4vw; }
-#tf-home .vw-font p { font-size: 1.3vw; }
+#tf-home .vw-font p { font-size: 1.6vw; }
 
 .content-heading p.lead { margin-bottom: 80px }
 a.goto-btn {

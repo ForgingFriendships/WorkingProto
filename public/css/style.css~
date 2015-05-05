@@ -110,7 +110,6 @@ a:focus {
   width:70%;
   padding:0;
   font-size:50%;
-  height:10px;
 }
 
 @media(min-width:768px){
@@ -214,7 +213,7 @@ nav.shrink .navbar-brand img{
 }
 #tf-home p { color: white }
 #tf-home .vw-font h1 { font-size: 3.4vw; }
-#tf-home .vw-font p { font-size: 1.3vw; }
+#tf-home .vw-font p { font-size: 1.6vw; }
 
 .content-heading p.lead { margin-bottom: 80px }
 a.goto-btn {
