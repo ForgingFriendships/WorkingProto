@@ -109,7 +109,6 @@
                     = @events.first.description
                   %p
                     = button_to 'Attend!', {:controller => "users", :action => "register_for_event", :event_for_registration => @events.first.id}, :method => :post, :confirm => 'Are you sure you want to attend this event?', :class => "btn btn-primary"
-                    %a.btn.btn-default{:href => "#", :role => "button"} Volunteer!
           - if @events.second
             .col-sm-6.col-md-4
               / event #2
@@ -123,7 +122,6 @@
                     = @events.second.description
                   %p
                     = button_to 'Attend!', {:controller => "users", :action => "register_for_event", :event_for_registration => @events.second.id}, :method => :post, :confirm => 'Are you sure you want to attend this event?', :class => "btn btn-primary"
-                    %a.btn.btn-default{:href => "#", :role => "button"} Volunteer!
         / End Container-Fluid
 
     #tf-contact.contact
