@@ -10,7 +10,10 @@ class FirstPartyUser < ActiveRecord::Base
   validates :email,     :presence     => true,
                         :format       => {  :with     => email_regex },
                         :uniqueness   => {  :case_sensitive => false }
-  has_secure_password #:has_provider?#adds automatically: password presence, length, confirmation
+  has_secure_password
+
+
+  #:has_provider?#adds automatically: password presence, length, confirmation
   #validates :password_digest, :presence => true
    #                           :unless   => :has_provider?
 #=end
@@ -25,7 +28,7 @@ class FirstPartyUser < ActiveRecord::Base
 
 
   has_and_belongs_to_many :events
-
+####DO WE EvEN NEED THIS
   def self.create_with_omniauth(auth)
     User.create!(
       :provider => auth["provider"],
