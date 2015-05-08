@@ -107,10 +107,9 @@ a:focus {
 }
 
 #sign-up{
-  width:60%;
+  width:70%;
   padding:0;
-  font-size:8px;
-  height:15px;
+  font-size:50%;
 }
 
 @media(min-width:768px){
@@ -121,10 +120,9 @@ a:focus {
 }
 
 #sign-up{
-  width: 22%;
-  height: 68px;
+  height: 22%; 
   font-size: 24px;
-  padding-top:10px;
+  padding:1%;
 }
 
 ul.nav li.dropdown:hover ul.dropdown-menu{ display: block; text-align:right; min-width:0px;}
@@ -214,7 +212,7 @@ nav.shrink .navbar-brand img{
 }
 #tf-home p { color: white }
 #tf-home .vw-font h1 { font-size: 3.4vw; }
-#tf-home .vw-font p { font-size: 1.3vw; }
+#tf-home .vw-font p { font-size: 1.6vw; }
 
 .content-heading p.lead { margin-bottom: 80px }
 a.goto-btn {
