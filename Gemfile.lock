@@ -32,6 +32,7 @@ GEM
     autoprefixer-rails (5.1.11)
       execjs
       json
+    babosa (0.3.11)
     bcrypt-ruby (3.0.1)
     bootstrap-sass (3.2.0.2)
       sass (~> 3.2)
@@ -141,6 +142,7 @@ GEM
     rake (10.4.2)
     rdoc (3.12.2)
       json (~> 1.4)
+    refinerycms (0.9.7.15)
     rspec (3.2.0)
       rspec-core (~> 3.2.0)
       rspec-expectations (~> 3.2.0)
@@ -190,6 +192,7 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
+  babosa (= 0.3.11)
   bcrypt-ruby (~> 3.0.0)
   bootstrap-sass (~> 3.2.0)
   capybara
@@ -203,6 +206,7 @@ DEPENDENCIES
   omniauth-twitter
   pg
   rails (= 3.2.18)
+  refinerycms
   rspec
   rspec-rails
   sass-rails (~> 3.2.3)
