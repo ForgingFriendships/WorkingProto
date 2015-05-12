@@ -15,10 +15,10 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
+  #gem 'cucumber-rails'
 end
 
 group :test do
-  gem 'cucumber-rails'
   gem 'capybara'
   gem 'rspec'
 end
