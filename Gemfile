@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.18'
 gem 'haml'
 
+gem 'refinerycms'
+gem 'babosa', '0.3.11'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -13,10 +15,10 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
+  #gem 'cucumber-rails'
 end
 
 group :test do
-  gem 'cucumber-rails'
   gem 'capybara'
   gem 'rspec'
 end
