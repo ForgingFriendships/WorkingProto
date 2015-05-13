@@ -42,6 +42,8 @@
                     %li
                       %a{:href => "/program"} About Forging Friendships
                     %li
+                      %a{:href => "/events_all"} Events
+                    %li
                       %a{:href => "/inspiration"} Inspiration
                     %li
                       %a{:href => "/management_team"} Management Team
