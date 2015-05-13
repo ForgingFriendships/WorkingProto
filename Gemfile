@@ -15,12 +15,14 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
-  #gem 'cucumber-rails'
+  gem 'cucumber-rails'
+  gem 'minitest'
 end
 
 group :test do
   gem 'capybara'
   gem 'rspec'
+  gem 'autotest-rails'
 end
 
 #password encryption
