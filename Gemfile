@@ -3,8 +3,9 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.18'
 gem 'haml'
 
-gem 'refinerycms'
-gem 'babosa', '0.3.11'
+#gem 'refinerycms'
+#gem 'babosa', '0.3.11'
+gem 'database_cleaner'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

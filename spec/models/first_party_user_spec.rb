@@ -71,6 +71,8 @@ describe FirstPartyUser do
 		it "should set the encrypted password" do
 			@FirstPartyUser.password_digest.should_not be_blank
 		end
+
+		#additional password tests go here etc
 	end
   end
 

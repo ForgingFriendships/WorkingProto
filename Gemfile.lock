@@ -35,7 +35,6 @@ GEM
       json
     autotest-rails (4.2.1)
       ZenTest (~> 4.5)
-    babosa (0.3.11)
     bcrypt-ruby (3.0.1)
     bootstrap-sass (3.2.0.2)
       sass (~> 3.2)
@@ -65,6 +64,7 @@ GEM
       mime-types (>= 1.16, < 3)
       nokogiri (~> 1.5)
       rails (>= 3, < 5)
+    database_cleaner (1.4.0)
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.5.2)
@@ -145,7 +145,6 @@ GEM
     rake (10.4.2)
     rdoc (3.12.2)
       json (~> 1.4)
-    refinerycms (0.9.7.15)
     rspec (2.99.0)
       rspec-core (~> 2.99.0)
       rspec-expectations (~> 2.99.0)
@@ -194,12 +193,12 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   autotest-rails
-  babosa (= 0.3.11)
   bcrypt-ruby (~> 3.0.0)
   bootstrap-sass (~> 3.2.0)
   capybara
   coffee-rails (~> 3.2.1)
   cucumber-rails
+  database_cleaner
   haml
   jquery-rails
   omniauth
@@ -208,7 +207,6 @@ DEPENDENCIES
   omniauth-twitter
   pg
   rails (= 3.2.18)
-  refinerycms
   rspec
   rspec-rails (~> 2.0)
   sass-rails (~> 3.2.3)
