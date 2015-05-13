@@ -14,14 +14,13 @@ end
 
 group :development, :test do
   gem 'sqlite3'
-  gem 'rspec-rails'
-  gem 'cucumber-rails'
-  gem 'minitest'
 end
 
 group :test do
+  gem 'cucumber-rails', :require => false
   gem 'capybara'
   gem 'rspec'
+  gem 'rspec-rails', '~> 2.0'
   gem 'autotest-rails'
 end
 
