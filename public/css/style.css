@@ -374,6 +374,16 @@ a.goto-btn { margin-right: 30px }
     margin: 0 auto;
     margin-bottom: 30px;
 }
+
+/* Events Section */
+#tf-events {
+    font-size: 1.5vw;
+    word-spacing: 5vw;
+}
+@media (max-width: 768px) {
+    #tf-events { font-size: 15px }
+}
+
 /* Service Section */
 #tf-services { padding: 60px 0 }
 .section-header {
